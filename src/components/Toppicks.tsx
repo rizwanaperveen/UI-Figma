@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Toppicks = () => {
   return (
     <>
-    <div className='w-[1440px] h-[874px] text-center mt-12 ml-60'>
+    <div className='w-[1440px] h-[874px] text-center mt-12 ml-40'>
         
         <div className='w-[311px] h-[54px] text-4xl text-bold flex justify-center items-start text-center sm:flex-col md:flex-cols-2 lg:flex-row ml-96'>
             <h1>Top Picks For You</h1></div>
