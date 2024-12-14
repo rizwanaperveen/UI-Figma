@@ -9,6 +9,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from 'react';
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -17,18 +18,18 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-[#FBEBB5] p-4 flex justify-around items-center lg:justify-between">
+      <nav className="w-full bg-[#FBEBB5] p-4 flex justify-around items-center gap-5 lg:justify-around">
         <div className="flex justify-around items-center gap-10 lg:w-1/2">
-          <Link href="/Home">Home</Link>
-          <Link href="/shop">Shop</Link>
-          <Link href="/about">About</Link>
-          <Link href="/Contact">Contact</Link>
+          <Link className="hover:underline" href="/Home">Home</Link>
+          <Link className="hover:underline" href="/shop">Shop</Link>
+          <Link className="hover:underline" href="/about">About</Link>
+          <Link className="hover:underline" href="/Contact">Contact</Link>
         </div>
         <div className="hidden lg:flex justify-around items-center gap-10 list-none">
-          <li className='flex items-center'><IoPersonOutline />!</li>
-          <li><RiSearchLine /></li>
-          <li><IoMdHeartEmpty /></li>
-          <li><IoCartOutline /></li>
+          <li className='flex items-center'><IoPersonOutline size={20}/>!</li>
+          <li><RiSearchLine  size={20}/></li>
+          <li><IoMdHeartEmpty size={20} /></li>
+          <li><Link href="/sidebar"><IoCartOutline size={20} /></Link></li>
         </div>
         <div className="cursor-pointer lg:hidden" onClick={toggleMenu}>
           {isMenuOpen ? <AiOutlineClose size={20} color='#000' /> : <AiOutlineMenu size={20} color='#000' />}
@@ -41,6 +42,8 @@ const Navbar = () => {
  <li><Link href="#about" onClick={toggleMenu}>About</Link></li>
  <li><Link href="#contact" onClick={toggleMenu}>Contact</Link></li>
 </ul>
+
+
 )}
 </>
 )
